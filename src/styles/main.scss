@@ -1,0 +1,23 @@
+@import "./helpers.scss";
+
+body {
+    margin: 0;
+    font-family: $montserrat;
+}
+
+.fp-watermark {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+
+    @media screen and (min-width: 1420px) {
+        padding: 0 80px;
+    }
+}
+
