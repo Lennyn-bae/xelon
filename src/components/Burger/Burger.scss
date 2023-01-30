@@ -1,0 +1,62 @@
+@import "../../styles/helpers.scss";
+
+.burger-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    cursor: pointer;
+
+    &__line {
+        width: 29px;
+        height: 0.1rem;
+        background-color: #fff;
+        margin-bottom: 5px;
+        transition: 0.4s;
+    }
+
+    &__line--2 {
+        width: 14px;
+        margin-left: auto;
+    }
+
+    &--active {
+
+        .burger-button__line {
+            margin-bottom: 8px;
+        }
+
+        .burger-button__line--1 {
+            transform: rotate(-45deg) translate(-6px, 8px);
+        }
+
+        .burger-button__line--2 {
+            opacity: 0;
+        }
+
+        .burger-button__line--3 {
+            transform: rotate(45deg) translate(-6px, -8px);
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        top: 30px;
+        right: 80px;
+
+        &__line {
+            width: 46px;
+            height: 0.125rem;
+            margin-bottom: 8px;
+        }
+
+        &__line--2 {
+            width: 23px;
+        }
+
+        &--active {
+            .burger-button__line--1 {
+                transform: rotate(-45deg) translate(-8px, 8px);
+            }
+        }
+    }
+}

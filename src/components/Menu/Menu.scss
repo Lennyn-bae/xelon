@@ -1,0 +1,51 @@
+@import "../../styles/helpers.scss";
+
+.menu {
+    background-color: black;
+
+    &__item {
+        color: $color-text-grey;
+        font-weight: 100;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0 0 36px 0;
+    }
+
+    &__logo {
+        width: 100px;
+        height: 30px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+
+        svg {
+            width: inherit;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .fp-overflow {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        &__item {
+            font-size: 42px;
+            line-height: 51px;
+        }
+
+        &__logo {
+            width: 166px;
+            height: 50px;
+            top: 30px;
+            left: 80px;
+        }
+    }
+}

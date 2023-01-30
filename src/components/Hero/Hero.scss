@@ -1,0 +1,66 @@
+@import "../../styles/helpers.scss";
+
+.hero {
+    background: url("../../assets/images/background.png") no-repeat center;
+    background-size: cover;
+
+    &__header-logo {
+        max-width: 200px;
+        margin: auto;
+
+        svg {
+            width: 100%;
+        }
+    }
+
+    &__button-wrapper {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+
+    &__button-down {
+        max-width: 160px;
+        margin: auto;
+        position: relative;
+        height: 60px;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: $color-text-light;
+            width: 0.075rem;
+            height: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__button-down-text {
+        color: $color-text-light;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin: 0 0 10px 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+        &__header-logo {
+            max-width: 500px;
+        }
+
+        &__button-down {
+            height: 100px;
+
+            &::after {
+                height: 60px;
+            }
+        }
+
+        &__button-down-text {
+            margin: 0 0 20px 0;
+        }
+    }
+}
